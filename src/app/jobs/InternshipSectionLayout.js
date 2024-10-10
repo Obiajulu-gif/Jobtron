@@ -83,19 +83,26 @@ const InternshipSectionLayout = () => {
 
 	return (
 		<>
-			<section className="relative bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white py-24">
+			<section className="relative bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white py-24 flex items-center">
+				{/* Background Image on the Left */}
+				<div
+					className="absolute inset-y-0 left-0 w-1/3 bg-cover bg-left bg-no-repeat opacity-80"
+					style={{
+						backgroundImage: "url('/images/job.svg')",
+					}}
+				></div>
+
+				{/* Overlay for Contrast */}
 				<div className="absolute inset-0 bg-black opacity-50"></div>
-				<div className="relative container mx-auto text-center">
-					<h1 className="text-4xl font-bold">
-						Kick-Start Your Career with Internships
-					</h1>
-					<p className="mt-4 max-w-xl mx-auto text-lg">
-						Search for Internship Opportunities Worldwide
-					</p>
-					<div className="mt-8 flex justify-center">
-						<div className="flex flex-wrap items-center bg-white rounded-lg shadow-lg overflow-hidden max-w-xl w-full">
+
+				{/* Main Content */}
+				<div className="relative container mx-auto text-center lg:text-left lg:ml-auto lg:pl-12 px-4 max-w-2xl">
+					<h1 className="text-4xl font-bold">Kick-Start Your Career</h1>
+					<p className="mt-4 text-lg">Search for Job Opportunities Worldwide</p>
+					<div className="mt-8 lg:justify-start px-4">
+						<div className="flex flex-col sm:flex-row flex-wrap bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-xl">
 							<select
-								className="flex-1 px-4 py-2 bg-gray-200 text-gray-700 focus:outline-none rounded-tl-lg rounded-bl-lg"
+								className="w-full sm:flex-1 px-2 py-2 bg-gray-200 text-gray-700 focus:outline-none rounded-tl-lg rounded-bl-lg sm:rounded-bl-none"
 								onChange={(e) => setCountry(e.target.value)}
 							>
 								<option value="">Select a country</option>
@@ -105,27 +112,32 @@ const InternshipSectionLayout = () => {
 									</option>
 								))}
 							</select>
+
 							<input
 								type="text"
 								placeholder="State"
-								className="flex-1 px-4 py-2 bg-gray-200 text-gray-700 focus:outline-none"
+								className="w-full sm:flex-1 px-2 py-2 bg-gray-200 text-gray-700 focus:outline-none border-t border-gray-200 sm:border-none"
 								onChange={(e) => setState(e.target.value)}
 							/>
+
 							<input
 								type="text"
-								placeholder="Discipline"
-								className="flex-1 px-4 py-2 bg-gray-200 text-gray-700 focus:outline-none"
+								placeholder="Jobs"
+								className="w-full sm:flex-1 px-2 py-2 bg-gray-200 text-gray-700 focus:outline-none border-t border-gray-200 sm:border-none"
 								onChange={(e) => setDiscipline(e.target.value)}
 							/>
+
 							<button
-								className="px-6 py-2 bg-blue-600 text-white flex items-center hover:bg-blue-700 transition duration-300 rounded-tr-lg rounded-br-lg"
+								className="w-full sm:w-auto px-2 py-2 bg-blue-600 text-white flex justify-center items-center hover:bg-blue-700 transition duration-300 rounded-lg"
 								onClick={handleSearch}
 								disabled={loading}
 							>
 								{loading ? (
 									"Searching..."
 								) : (
-									<><FaSearch className="mr-2" /> Find Internship</>
+									<>
+										<FaSearch className="mr-2" /> Find Jobs
+									</>
 								)}
 							</button>
 						</div>
