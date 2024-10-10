@@ -18,11 +18,12 @@ const Navbar = () => {
 				<div className="flex items-center space-x-2">
 					<Link href="/" className="flex items-center space-x-2">
 						<Image
-							src="/images/logo.png" // Path to your logo image
+							src="/images/jobtronlogo.png" // Path to your logo image
 							alt="Jobtron Logo"
 							width={32} // Desired width of logo image
 							height={32} // Desired height of logo image
 							priority // Ensures the logo loads quickly
+							className="rounded-lg"
 						/>
 						<span className="text-2xl font-bold text-blue-600">Jobtron</span>
 					</Link>

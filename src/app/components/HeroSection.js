@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <header className="relative bg-blue-600 text-white py-20 overflow-hidden">
       {/* Background Image (visible on mobile only) */}
-      <div className="absolute inset-0 bg-[url('/images/work.svg')] bg-cover bg-center opacity-20 lg:hidden"></div>
+      <div className="absolute inset-0 bg-[url('/images/work.svg')] bg-cover bg-center opacity-30 lg:hidden"></div>
 
       <div className="container relative z-10 mx-auto flex flex-col lg:flex-row justify-center items-center text-center lg:text-left px-4">
         {/* Text Section */}

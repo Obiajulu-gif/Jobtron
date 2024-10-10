@@ -83,7 +83,7 @@ const InternshipSectionLayout = () => {
 
 	return (
 		<>
-			<section className="relative bg-gradient-to-r from-green-400 to-blue-500 text-white py-24">
+			<section className="relative bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white py-24">
 				<div className="absolute inset-0 bg-black opacity-50"></div>
 				<div className="relative container mx-auto text-center">
 					<h1 className="text-4xl font-bold">
@@ -95,7 +95,7 @@ const InternshipSectionLayout = () => {
 					<div className="mt-8 flex justify-center">
 						<div className="flex flex-wrap items-center bg-white rounded-lg shadow-lg overflow-hidden max-w-xl w-full">
 							<select
-								className="flex-1 px-4 py-2 bg-gray-200 text-gray-700 focus:outline-none"
+								className="flex-1 px-4 py-2 bg-gray-200 text-gray-700 focus:outline-none rounded-tl-lg rounded-bl-lg"
 								onChange={(e) => setCountry(e.target.value)}
 							>
 								<option value="">Select a country</option>
@@ -118,16 +118,14 @@ const InternshipSectionLayout = () => {
 								onChange={(e) => setDiscipline(e.target.value)}
 							/>
 							<button
-								className="px-6 py-2 bg-green-500 text-white flex items-center hover:bg-green-600 transition duration-300"
+								className="px-6 py-2 bg-blue-600 text-white flex items-center hover:bg-blue-700 transition duration-300 rounded-tr-lg rounded-br-lg"
 								onClick={handleSearch}
 								disabled={loading}
 							>
 								{loading ? (
 									"Searching..."
 								) : (
-									<>
-										<FaSearch className="mr-2" /> Find Internship
-									</>
+									<><FaSearch className="mr-2" /> Find Internship</>
 								)}
 							</button>
 						</div>
