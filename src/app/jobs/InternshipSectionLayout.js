@@ -85,12 +85,7 @@ const InternshipSectionLayout = () => {
 		<>
 			<section className="relative bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white py-24 flex items-center">
 				{/* Background Image on the Left */}
-				<div
-					className="absolute inset-y-0 left-0 w-1/3 bg-cover bg-left bg-no-repeat opacity-80"
-					style={{
-						backgroundImage: "url('/images/job.svg')",
-					}}
-				></div>
+				<div className="absolute inset-0 bg-[url('/images/job.svg')] bg-cover bg-center opacity-30 lg:hidden"></div>
 
 				{/* Overlay for Contrast */}
 				<div className="absolute inset-0 bg-black opacity-50"></div>
